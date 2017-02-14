@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<script type="text/javascript" src="obsluga_formularzyID.js"></script>
+<style type="text/css">
+	#caly{
+		margin:auto;
+		width:80%;
+	}
+	#lewy{
+		background-color:#FFFFCC;
+		width:60%;
+		float:left;
+		height:600px;
+	}
+	#prawy{
+		background-color:#FFCC66;
+		width:40%;
+		float:right;
+		height:600px;
+	}
+	#stopka{
+		clear:both;
+	}
+</style>
+</head>
+
+<body bgcolor="#99CCFF">
+<i>Wykonaj w Java Script obsługę formularza zamówienia usług telekomunikacynych:</i><br><br><br>
+
+	<div id="caly">
+		<div id="lewy">
+			<b>Nazwa firmy/Nazwisko i imię klienta:</b><br> <input type="text" id="nazwa" name="nazwa" style="width: 95%"><br><br>
+			<!-- POLE RADIO -->
+			<b>Firma/Osoba prywatna:</b>
+			<input type="radio" id="rodzaj" name="rodzaj" value="Firma">Firma
+			<input type="radio" id="rodzaj" name="rodzaj" value="Osoba Prywatna">Osoba prywatna<br><br>
+			
+			<!-- POLE SELECT -->
+			<b>Rok i miesiąc urodzenia/założenia firmy:</b>
+			<b>Rok:</b> <select id="rok" name="rok" size="1">
+							<option>1995</option>
+							<option>1996</option>
+							<option>1996</option>
+							<option>1997</option>
+							<option>1998</option>
+							<option>1999</option>
+							<option>2000</option>
+						</select>
+			<b>Miesiąc:</b> <select id="mc" name="mc" size="1">
+								<option>01</option>
+								<option>02</option>
+								<option>03</option>
+								<option>04</option>
+								<option>05</option>
+								<option>06</option>
+								<option>07</option>
+								<option>08</option>
+								<option>09</option>
+								<option>10</option>
+								<option>11</option>
+								<option>12</option>
+							</select>	
+			<br><br>
+		
+			<!-- POLE CHECKBOX -->					
+			<b>Wybrany wariant usługi:</b><br>
+			<input type="checkbox" id="wariant" name="wariant" value="100" checked>&nbspPodstawowy 100zł&nbsp
+			<input type="checkbox" id="wariant" name="wariant" value="20">&nbspPakiet SMS 20zł&nbsp<br>
+			<input type="checkbox" id="wariant" name="wariant" value="30">&nbspPakiet danych 30zł&nbsp
+			<input type="checkbox" id="wariant" name="wariant" value="40">&nbspUbezpieczenie 40zł&nbsp<br><br>
+			
+			<!-- POLE TEXTAREA -->
+			<b>Uwagi:</b>
+			<br><textarea id="uwagi" name="uwagi" cols="50" rows="5" style="width: 95%"></textarea><br><br>
+		</div>		
+		<div id="prawy">	
+			<b>PODSUMOWANIE:</b><br><br>
+			<b>Zamawiający:</b> 
+			<br><span id="wynzam"></span><br><br>
+			<b>Rodzaj:</b> 
+			<br><span id="wynrodz"></span><br><br>
+			<b>Rok i miesiąc urodzenia:</b> 
+			<br><span id="wynrokmc"></span><br><br>
+			<b>Suma opłat za wybrane usługi:</b> 
+			<br><span id="wynoplaty"></span>zł<br><br>
+			<b>Uwagi:</b> 
+			<br><span id="wynuwagi"></span><br><br>		
+		</div>
+	</div>	
+	<div id="stopka">
+		<center>
+		<button onclick="sprawdz()" style="width: 80%; height: 60px">Sprawdź wprowadzone dane</button>
+		</center>
+	</div>	
+
+
+
+</body>
+</html>
